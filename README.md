@@ -1,8 +1,34 @@
 # grafana
-Grafana container with some additional visualization plugins.
+Grafana container with simplified build and some visualization panels pre-installed.
+
+* Internal sqlite storage is located at "/data". Bind a volume there for resiliency.
+* Default user is "admin" and default password is "admin". You will be prompted to change initial password on first login.
+* You can create containers FROM this one in order to add pre-installed dashboards and datasources. Simply add your json dashboards/datasources to /provisioning on your Dockerfile. See http://github.com/flaviostutz/docker-swarm-grafana as an example.
 
 ## Usage
-docker run -d -p 3000:3000 flaviostutz/grafana:5.1.3
+
+docker-compose.yml
+
+```
+version: '3.5'
+
+services:
+
+  grafana:
+    image: flaviostutz/grafana
+    ports:
+      - 3000:3000
+    volumes:
+      - grafana:/data
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=mypass
+
+volumes:
+  grafana:
+
+```
+
+Open your browser at http://localhost:3000/
 
 ## Pre-installed visualization panels
   * grafana-worldmap-panel
