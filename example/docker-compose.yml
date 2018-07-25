@@ -1,0 +1,9 @@
+version: '3.5'
+
+services:
+
+  grafana:
+    image: flaviostutz/grafana:5.1.3
+    ports:
+      - 3000:3000
+
