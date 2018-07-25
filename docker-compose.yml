@@ -8,6 +8,8 @@ services:
       - 3000:3000
     volumes:
       - grafana:/data
+    environment:
+      - GF_LOG_LEVEL=debug
 
 volumes:
   grafana:

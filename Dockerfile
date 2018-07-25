@@ -2,6 +2,8 @@ FROM debian:stretch-slim
 
 ENV GF_SECURITY_ADMIN_USER admin
 ENV GF_SECURITY_ADMIN_PASSWORD admin
+ENV GF_LOG_MODE console
+ENV GF_LOG_LEVEL info
 
 RUN apt-get update && apt-get install -y wget libfontconfig ca-certificates
 RUN apt-get autoremove -y && rm -rf /var/lib/apt/lists/*
