@@ -4,6 +4,7 @@ services:
 
   grafana:
     build: .
+    image: flaviostutz/grafana:5.2.4
     ports:
       - 3000:3000
     volumes:
