@@ -1,4 +1,7 @@
 # grafana
+
+[<img src="https://img.shields.io/docker/automated/flaviostutz/grafana"/>](https://hub.docker.com/r/flaviostutz/grafana)
+
 Grafana container with simplified build and some visualization panels pre-installed.
 
 * Internal sqlite storage is located at "/data". Bind a volume there for resiliency.
