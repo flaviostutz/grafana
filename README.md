@@ -12,7 +12,7 @@ Grafana container with simplified build and some visualization panels pre-instal
 
 docker-compose.yml
 
-```
+```yml
 version: '3.5'
 
 services:
@@ -34,14 +34,15 @@ volumes:
 Open your browser at http://localhost:3000/
 
 ## Pre-installed visualization panels
-  * grafana-worldmap-panel
-  * grafana-piechart-panel
-  * petrslavotinek-carpetplot-panel
-  * neocat-cal-heatmap-panel
-  * briangann-gauge-panel
-  * jdbranham-diagram-panel
-  * citilogics-geoloop-panel
-  * mtanda-histogram-panel
-  * mtanda-heatmap-epoch-panel
-  * natel-plotly-panel 
-  * bessler-pictureit-panel
+
+* grafana-worldmap-panel
+* grafana-piechart-panel
+* petrslavotinek-carpetplot-panel
+* neocat-cal-heatmap-panel
+* briangann-gauge-panel
+* jdbranham-diagram-panel
+* citilogics-geoloop-panel
+* mtanda-histogram-panel
+* mtanda-heatmap-epoch-panel
+* natel-plotly-panel
+* bessler-pictureit-panel

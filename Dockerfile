@@ -1,4 +1,4 @@
-FROM grafana/grafana:5.2.4
+FROM grafana/grafana:7.1.3-ubuntu
 
 #PANELS
 # RUN grafana-cli plugins install mtanda-histogram-panel #doesnt work on Grafana 5.x
