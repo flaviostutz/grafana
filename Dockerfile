@@ -1,4 +1,4 @@
-FROM grafana/grafana:7.1.3-ubuntu
+FROM grafana/grafana:7.1.5-ubuntu
 
 #PANELS
 # RUN grafana-cli plugins install mtanda-histogram-panel #doesnt work on Grafana 5.x
@@ -26,6 +26,7 @@ RUN grafana-cli plugins install zuburqan-parity-report-panel
 #DATASOURCES
 RUN grafana-cli plugins install camptocamp-prometheus-alertmanager-datasource
 
+USER root
 VOLUME [ "/data" ]
 
 EXPOSE 3000
